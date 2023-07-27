@@ -10,3 +10,4 @@ for (let name of names) {
 }
 
 names.indexOf(searchName);
+names.indexOf('');
