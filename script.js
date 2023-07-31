@@ -21,3 +21,25 @@ if (names.indexOf('Денис')==!1) {
 if (names.includes('Денис')) {
   console.log('нашли Дениса');
 }
+
+const employees=[
+  {name:'Мария',department:'IT',salary:'75000'},
+  {name:'Иван',department:'Продажи',salary:'55000'},
+  {name:'Николай',department:'it',salary:'92000'},
+  {name:'Мария',department:'Маркетинг',salary:'45000'},
+]
+
+let salarys=[];
+
+for(let employee of employees){
+  salarys.push(employee.salary);
+}
+
+salarys;
+console.log(salarys);
+
+employees.map(employee=> employees.salary);
+
+console.log(employees.map(employee=> employees.salary));
+
+console.log(employees.map(employee=> employees.salary*2));
