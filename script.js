@@ -43,3 +43,29 @@ employees.map(employee=> employees.salary);
 console.log(employees.map(employee=> employees.salary));
 
 console.log(employees.map(employee=> employees.salary*2));
+
+class Sportsmen{
+  constructor(){
+    this.scores=[];
+  }
+
+
+addScore (score){
+  this.scores.push(score);
+}
+
+calculateAverage(){
+  if(this.scores.lenth===0){
+    return 0;
+  }
+
+
+let sum=0;
+for (let i = 0; i < this.scores.length; i++) {
+  const element = array[i];
+  sum+=this.scores[i];
+
+    }
+  return sum/this.scores.length; 
+  }
+}
