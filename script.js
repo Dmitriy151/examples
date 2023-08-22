@@ -43,8 +43,9 @@ employees.map(employee=> employees.salary);
 console.log(employees.map(employee=> employees.salary));
 
 console.log(employees.map(employee=> employees.salary*2));
+let methodName='calculateAverage';
 
-class Sportsmen{
+class Sportsman{
   constructor(){
     this.scores=[];
   }
@@ -54,7 +55,7 @@ addScore (score){
   this.scores.push(score);
 }
 
-calculateAverage(){
+[methodName](){
   if(this.scores.lenth===0){
     return 0;
   }
@@ -62,10 +63,17 @@ calculateAverage(){
 
 let sum=0;
 for (let i = 0; i < this.scores.length; i++) {
-  const element = array[i];
+ 
   sum+=this.scores[i];
 
     }
   return sum/this.scores.length; 
   }
 }
+
+let olga= new Sportsman();
+olga.addScore(9);
+olga.addScore(10);
+olga.addScore(11);
+
+olga.calculateAverage();
