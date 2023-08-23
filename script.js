@@ -1,4 +1,4 @@
-const names= ['Денис','Егор','Пётер','Иван','Олег'];
+ const names= ['Денис','Егор','Пётер','Иван','Олег'];
 undefined
 let searchName='Егор';
 undefined
@@ -43,37 +43,88 @@ employees.map(employee=> employees.salary);
 console.log(employees.map(employee=> employees.salary));
 
 console.log(employees.map(employee=> employees.salary*2));
-let methodName='calculateAverage';
 
+
+
+
+
+class BMW {
+	constructor(name, color){
+		this.carName = name;
+		this.color = color;
+	}
+}
+
+let garage = [
+	new BMW("ласточка", "синий"),
+	new BMW("принцесса", "белый")
+];
+
+let oleg = {
+	name: "Олег",
+	lastName: "Петров",
+	gender: "мужчина",
+	type: "человек",
+	age: 15,
+}
+
+let ivan = {
+	name: "Иван",
+	lastName: "Иванов",
+	gender: "мужчина",
+	type: "человек",
+	age: 20,
+}
+
+let nikita = {
+	name: "Никита",
+	lastName: "Романов",
+	gender: "мужчина",
+	type: "человек",
+}
+
+class Human{
+	constructor(name, lastName, gender, type, age = 0){
+		this.name = name;
+		this.lastName = lastName;
+		this.gender = "мужчина";
+	  this.type = "человек";
+		this.age = age;
+	}
+}
+
+let persons = [
+	new Human("Олег", "Петров", 15),
+	new Human("Иван", "Иванов", 20),
+	new Human("Никита", "Романов"),
+  new Human("Лев", "Толстой", "мужчина","человек",25),
+]
+
+let methodName = 'calculateAverage';
 class Sportsman{
-  constructor(){
-    this.scores=[];
-  }
+	constructor(){
+		this.scores = [];
+	}
 
+	addScore(score){
+		this.scores.push(score);
+	}
 
-addScore (score){
-  this.scores.push(score);
+	['calculate'+'Average'](){
+		if(this.scores.length === 0){
+			return 0;
+		}
+
+		let summ = 0;
+		for (let i = 0; i < this.scores.length; i++) {
+			summ += this.scores[i];			
+		}
+		return summ / this.scores.length;
+	}
 }
 
-[methodName](){
-  if(this.scores.lenth===0){
-    return 0;
-  }
-
-
-let sum=0;
-for (let i = 0; i < this.scores.length; i++) {
- 
-  sum+=this.scores[i];
-
-    }
-  return sum/this.scores.length; 
-  }
-}
-
-let olga= new Sportsman();
+let olga = new Sportsman();
 olga.addScore(9);
 olga.addScore(10);
-olga.addScore(11);
-
-olga.calculateAverage();
+olga.addScore(10);
+console.log(olga.calculateAverage());
