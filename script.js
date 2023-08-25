@@ -131,12 +131,70 @@ console.log(olga.calculateAverage());
 
 
 
-function init() {
-  let userName='Олег';
-function showGreeting(name) {
-  console.log(`Привет ${name}`);
-}
-showGreeting(userName);
-}
-init();
+// function init() {
+//   let userName='Олег';
+// function showGreeting(name) {
+//   console.log(`Привет ${name}`);
+// }
+// showGreeting(userName);
+// }
+// init();
 
+try {
+  console.log('какая-нибудь строка'); 
+} catch (error) {
+  console.log(error);
+}
+
+try {
+  setTimeout(() => {
+    throw new Error('ошибка');
+  }, 5000); 
+} catch (error) {
+  console.log(error);
+}
+
+setTimeout(() => {
+  console.log('мы внутри колбека');
+  try {
+      console.log('мы внутри конструкции try');
+      throw new Error('ошибка');
+  } catch (error) {
+    console.log('мы внутри блока catch');
+    console.log(error);
+  }
+}, 5000);
+
+// function showGreeting () {
+//   console.log('Привет пользователь');
+// } 
+
+// for(let i; i<10; i++){
+//   const currentDate= new Date();
+//   setTimeout(()=> {
+//     const now=new Date();
+//     console.log(now-currentDate);
+//   },2000)
+// }
+
+// function doAsyncAction(){
+//   const currentDate= new Date();
+//   setTimeout(()=> {
+//     const now=new Date();
+//     console.log(now-currentDate);
+//   },1000)
+// }
+
+// function sum() {
+//   let sum=0;
+//   for (let i = 0; i <=10000000; i++) {
+//   sum+=i;
+  
+//   }
+//   return sum;
+// }
+
+// for(let i=0; i<10;i++){
+//   doAsyncAction();
+//   sum();
+// }
