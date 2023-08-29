@@ -183,7 +183,7 @@ setTimeout(() => {
 //     const now=new Date();
 //     console.log(now-currentDate);
 //   },1000)
-// }
+// } 
 
 // function sum() {
 //   let sum=0;
