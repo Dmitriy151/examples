@@ -77,3 +77,18 @@ olga.addScore(10);
 olga.addScore(11);
 
 olga.calculateAverage();
+
+
+let xhr = new XMLHttpRequest();
+
+function processFinish() {
+  console.log(xhr.responseText);
+}
+
+xhr.oneload = processFinish;
+xhr.open('GET', 'https://cbr-xml-daily.ru/daily_json.js');
+xhr.send();
+
+const someStep=(n, itemsPerStep, onload) => {
+
+}
