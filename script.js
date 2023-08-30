@@ -129,3 +129,33 @@ olga.addScore(10);
 olga.addScore(11);
 
 olga.calculateAverage();
+
+const summStep= (n, itemsPerStep, onload)=>{
+  const size=Math.ceil(n/itemsPerStep);//количество шагов
+
+let index = 0;//текущий шаг
+let summ = 0;//результат суммирования
+  return()=> {
+    if(index === size){
+      onload(summ);
+      return;
+    }
+
+    const start = index * itemsPerStep;
+    const end =Math.min(n+1, (index + 1) * itemsPerStep);
+
+    for (let i = start; i < end; i++){
+      summ += i;
+start     
+    }
+    console.log(`Шаг:${index}, ${summ}`);
+    index++;
+    sheduleStep();
+  }
+}
+
+const onload=(summ)=> console.log(summ);
+const step=summStep(100000,25000,onload);
+const sheduleStep=()=> setTimeout(step,100);
+
+sheduleStep();
