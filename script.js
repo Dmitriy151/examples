@@ -159,3 +159,12 @@ const step=summStep(100000,25000,onload);
 const sheduleStep=()=> setTimeout(step,100);
 
 sheduleStep();
+
+let xhr=new XMLHttpRequest();
+function processFinish(){
+	console.log(xhr.responseText);
+}
+
+xhr.onload=processFinish;
+xhr.open("GET", "https://www.cbr-xml-daily.ru/daily_json.js");
+xhr.send()
