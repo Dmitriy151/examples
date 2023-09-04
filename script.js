@@ -167,4 +167,17 @@ function processFinish(){
 
 xhr.onload=processFinish;
 xhr.open("GET", "https://www.cbr-xml-daily.ru/daily_json.js");
-xhr.send()
+xhr.send();
+
+// const computer= {
+// 	text:'результат',sum(a,b) {
+// 		this.text+=a+b;
+// 		return a+b;
+// 	}
+// }
+
+function cachedDecorated(func) {
+	let cache={};
+	return (...args)
+	hash
+}
