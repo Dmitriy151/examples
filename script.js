@@ -176,8 +176,17 @@ xhr.send();
 // 	}
 // }
 
-function cachedDecorated(func) {
-	let cache={};
-	return (...args)
-	hash
-}
+// function cachedDecorated(func) {
+// 	let cache={};
+// 	return (...args)=>{
+// 	debugger;	
+// 	const hash=args.join(',');
+// 	if (hash in cache) {
+// 		return cache[hash];
+// 	}
+
+// 	const result=func(...args);
+// 	cache[hash]=result;
+// 	return result;
+// }
+// }
